@@ -59,9 +59,6 @@ unset QTDIR
 /tmp/squashfs-root/AppRun $HOME/squashfs-root/usr/bin/project-plus-dolphin -unsupported-allow-new-glibc -no-copy-copyright-files -no-translations -bundle-non-qt-libs
 export PATH=$(readlink -f /tmp/squashfs-root/usr/bin/):$PATH
 
-# Add AppImageUpdate as the internal updater
-mv /tmp/AppImageUpdate-x86_64.AppImage $HOME/squashfs-root/usr/bin/AppImageUpdate
-
 # Add dialog as the fallback
 cp /usr/bin/dialog ./squashfs-root/usr/bin/
 cp /lib/x86_64-linux-gnu/libncursesw.so.5 $HOME/squashfs-root/usr/lib/

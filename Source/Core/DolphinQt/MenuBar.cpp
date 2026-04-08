@@ -67,7 +67,6 @@
 #include "DolphinQt/QtUtils/QueueOnObject.h"
 #include "DolphinQt/QtUtils/SignalBlocking.h"
 #include "DolphinQt/Settings.h"
-#include "DolphinQt/Updater.h"
 
 #include "UICommon/AutoUpdate.h"
 #include "UICommon/GameFile.h"
@@ -660,8 +659,6 @@ void MenuBar::AddHelpMenu()
   help_menu->addSeparator();
 #endif
 
-  QAction* updaterCheck = help_menu->addAction(tr("Check For &Updates"));
-  connect(updaterCheck, &QAction::triggered, this, &MenuBar::ShowUpdateDialog);
   help_menu->addAction(tr("&About"), this, &MenuBar::ShowAboutDialog);
 }
 

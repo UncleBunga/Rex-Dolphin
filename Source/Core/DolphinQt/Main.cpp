@@ -41,7 +41,6 @@
 #include "DolphinQt/Settings.h"
 #include "DolphinQt/Settings/PathPane.h"
 #include "DolphinQt/Translation.h"
-#include "DolphinQt/Updater.h"
 
 #include "UICommon/CommandLineParse.h"
 #include "UICommon/UICommon.h"
@@ -312,9 +311,6 @@ int main(int argc, char* argv[])
 
     if (!Settings::Instance().IsBatchModeEnabled())
     {
-      auto* updater = new Updater(&win, Config::Get(Config::MAIN_AUTOUPDATE_UPDATE_TRACK),
-                                  Config::Get(Config::MAIN_AUTOUPDATE_HASH_OVERRIDE));
-      updater->start();
     }
 
     retval = app.exec();

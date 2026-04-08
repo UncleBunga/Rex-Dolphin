@@ -291,12 +291,6 @@ add_executable(project-plus-dolphin
   Main.cpp
   MainWindow.cpp
   MainWindow.h
-  ProjectPlus/DownloadWorker.cpp
-  ProjectPlus/DownloadWorker.h
-  ProjectPlus/InstallUpdateDialog.cpp
-  ProjectPlus/InstallUpdateDialog.h
-  ProjectPlus/UpdateDialog.cpp
-  ProjectPlus/UpdateDialog.h
   MenuBar.cpp
   MenuBar.h
   NetPlay/ChunkedProgressDialog.cpp
@@ -419,11 +413,18 @@ add_executable(project-plus-dolphin
   ToolBar.h
   Translation.cpp
   Translation.h
-  Updater.cpp
-  Updater.h
   WiiUpdate.cpp
   WiiUpdate.h
 )
+
+if(ENABLE_AUTOUPDATE)
+  target_sources(project-plus-dolphin PRIVATE
+    ProjectPlus/DownloadWorker.cpp
+    ProjectPlus/DownloadWorker.h
+    Updater.cpp
+    Updater.h
+  )
+endif()
 
 if (WIN32)
   target_sources(project-plus-dolphin PRIVATE
