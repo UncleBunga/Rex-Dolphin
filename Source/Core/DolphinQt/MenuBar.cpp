@@ -645,10 +645,10 @@ void MenuBar::AddHelpMenu()
 
   QAction* website = help_menu->addAction(tr("&Website"));
   connect(website, &QAction::triggered, this,
-          [] { QDesktopServices::openUrl(QUrl(QStringLiteral("https://projectplusgame.com/"))); });
-  QAction* documentation = help_menu->addAction(tr("Project+ Discord"));
+          [] { QDesktopServices::openUrl(QUrl(QStringLiteral("https://rexbuild.site//"))); });
+  QAction* documentation = help_menu->addAction(tr("REX Discord"));
   connect(documentation, &QAction::triggered, this, [] {
-    QDesktopServices::openUrl(QUrl(QStringLiteral("https://discord.gg/vdssRDg")));
+    QDesktopServices::openUrl(QUrl(QStringLiteral("https://discord.gg/vegZup9xVc")));
   });
   QAction* github = help_menu->addAction(tr("&GitHub Repository"));
   connect(github, &QAction::triggered, this, [] {
